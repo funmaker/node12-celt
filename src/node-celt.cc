@@ -141,7 +141,7 @@ class CeltEncoder : public ObjectWrap {
 
 			//v8::Persistent<v8::FunctionTemplate> constructor;
 			//NanAssignPersistent(constructor, tpl);
-			exports->Set(Nan::New<String>("CeltEncoder").ToLocalChecked(), tpl->GetFunction(Nan::GetCurrentContext()).ToLocalChecked());
+			exports->Set(Nan::GetCurrentContext(), Nan::New<String>("CeltEncoder").ToLocalChecked(), tpl->GetFunction(Nan::GetCurrentContext()).ToLocalChecked());
 		}
 };
 
